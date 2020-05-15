@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="delAll()">
+        清除
+      </button>
+    </ion-buttons>
+    <ion-title start>图书收藏</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="public-page-content">
+    <div class="book-records public-page-content">
+      <div class="record-items min-loading-height public-page-content">
+        <div class="record-item" *ngFor="let item of readRecord">
+          <div class="cover" (click)="toread(item)">
+            <img src="{{service.ctxPath + item.bk_cover_small}}" *ngIf="item.bk_cover_small">
+          </div>
+          <div class="detail">
+            <h1>{{item.bk_name}}</h1>
+            <!-- <p>{{item.bk_author}}</p>
+            <p>
+              <label [innerHTML]="item.update_time"></label>
+            </p>
+            <button (click)="toread(item)">继续阅读</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="row_mess" *ngIf="!readRecord">已经没有更多数据</p>
+</ion-content>

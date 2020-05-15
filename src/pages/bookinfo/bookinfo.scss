@@ -1,0 +1,187 @@
+page-bookinfo {
+  .rback {
+    width: 40px;
+    height: 30px;
+    float: left;
+    background: url('../assets/imgs/jiantou.png') no-repeat center center / 20px auto;
+  }
+  .submit {
+    float: right;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-form {
+    float: left;
+    width: calc(100% - 110px);
+    border: 1px #ddd solid;
+  }
+  .footer-form input {
+    margin: 6px 8px 6px 8px;
+  }
+  .info-parent {
+    float: left;
+    width: 100%;
+    padding: 30px 16px 16px 16px;
+  }
+  .book-cover {
+    float: left;
+    width: 28vw;
+    height: 35vw;
+  }
+  .book-cover img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .book-detail {
+    float: left;
+    width: calc(100% - 28vw);
+    padding-left: 15px;
+  }
+  .book-detail p {
+    margin: 0;
+  }
+  .book-detail p.bk-name {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+  }
+  .book-detail p.bk-class {
+    white-space: nowrap;
+    overflow: hidden;
+    color: #787878;
+    text-overflow: ellipsis;
+  }
+  .bk-html {
+    float: left;
+    width: 100%;
+    padding-top: 15px;
+    font-size: 12px;
+    color: #676767;
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 1.8rem;
+  }
+  .newpl {
+    float: left;
+    width: 100%;
+    padding: 0 0 0 16px;
+  }
+  .newpl .newpl-title {
+    float: left;
+    width: 100%;
+    line-height: 40px;
+    color: #666;
+  }
+  .newpl .hot_cont {
+    float: left;
+    width: 100%;
+  }
+  .newpl .book_list {
+    float: left;
+    width: 33.33%;
+    padding-right: 16px;
+  }
+  .newpl .img_box {
+    float: left;
+    width: 100%;
+    height: 33vw;
+  }
+  .newpl .img_box img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .book_list span {
+    float: left;
+    width: 100%;
+    margin: 5px 0 10px;
+    height: 32px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px;
+    color: #999;
+  }
+  .pllist {
+    float: left;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .pllist .plink {
+    text-align: center;
+    font-size: 12px;
+    border-top: 1px #eee solid;
+    padding-top: 16px;
+    display: inline-block;
+    width: 100%;
+  }
+  .plitem {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .plitem .m-cover {
+    float: left;
+    width: 30px;
+    height: 30px;
+  }
+  .plitem .m-cover img {
+    border-radius: 50%;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .m-detail {
+    float: left;
+    width: calc(100% - 30px);
+    padding-left: 10px;
+    border-bottom: 1px #ddd dashed;
+    padding-bottom: 10px;
+  }
+  .m-row {
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .m-row label {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: steelblue;
+  }
+  .m-row span {
+    float: left;
+    width: 50%;
+    text-align: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999;
+    font-size: 12px;
+  }
+  .m-col {
+    float: left;
+    width: 100%;
+    color: #666;
+    font-size: 12px;
+  }
+  .book-action {
+    float: left;
+    width: 100%;
+    border-top: 1px #eee solid;
+    border-bottom: 10px #f5f8fa solid;
+  }
+  .book-action a{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+  }
+}

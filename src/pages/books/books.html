@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="saomaAddBook()">
+        <ion-icon class="iconfont icon-saoma"></ion-icon>
+      </button>
+      <button ion-button icon-only (tap)="toSearchPage()">
+        <ion-icon class="iconfont icon-search"></ion-icon>
+      </button>
+      <button ion-button icon-only (tap)="toMePage()">
+        <ion-icon class="iconfont icon-user"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title start>电子书</ion-title>
+  </ion-navbar>
+  <ion-toolbar id="Subheader">
+    <ion-toolbar>
+      <ion-title>
+        <ion-scroll scrollX="true">
+          <div class="scroll-list">
+            <span class="scroll-item" *ngFor="let item of topData" (tap)="getlistData(item.book_cat_id)" [ngClass]="{'active': param.book_cat_id == item.book_cat_id}">{{item.book_cat_name}}</span>
+          </div>
+        </ion-scroll>
+      </ion-title>
+    </ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollDownOnLoad="true">
+  <div style="padding: 16px 0 16px 16px;display: inline-block;width: 100%;">
+    <div class="data-list" *ngFor="let item of searchData" (tap)="toBookinfoPage(item)">
+      <div class="bk-cover">
+        <img src="{{service.ctxPath + item.book_cover_small}}" />
+      </div>
+      <div class="bk-detail">
+        <h3>{{item.book_name}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="getlistDataMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+  <p class="row_mess" *ngIf="param.more">已经没有更多数据</p>
+</ion-content>

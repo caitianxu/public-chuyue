@@ -1,0 +1,26 @@
+page-videos {
+  .data-list {
+    float: left;
+    width: calc(50vw - 24px);
+  }
+  .data-list:nth-child(2n){
+    margin-left: 16px;
+  }
+  .data-list .bk-cover {
+    float: left;
+    width: 100%;
+    height: 30vw;
+  }
+  .data-list .bk-cover img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .data-list .bk-detail {
+    display: inline-block;
+    width: 100%;
+    height: 3rem;
+    line-height: 1.5rem;
+    overflow: hidden;
+  }
+}

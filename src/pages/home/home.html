@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="saomaAddBook()">
+        <ion-icon class="iconfont icon-saoma"></ion-icon>
+      </button>
+      <button ion-button icon-only (tap)="toSearchPage()">
+        <ion-icon class="iconfont icon-search"></ion-icon>
+      </button>
+      <button ion-button icon-only (tap)="toMePage()">
+        <ion-icon class="iconfont icon-user"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title start>楚阅</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="cont_cont">
+    <div class="hot_book" *ngIf="hotBook">
+      <p>
+        <span style="font-size:1.4rem;">最新图书</span>
+        <a (tap)="toBooklistPage()" class="more">
+          <em>更多&nbsp;&gt;&nbsp;</em>
+        </a>
+      </p>
+      <div class="hot_cont">
+        <a *ngFor="let bk of hotBook" class="book_list" (tap)="toBookinfoPage(bk)">
+          <div class="img_box">
+            <img src="{{service.ctxPath + bk.book_cover_small}}" alt="">
+          </div>
+          <span>{{bk.book_name}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="hot_video">
+      <p>
+        <span style="font-size:1.4rem;">最新视频</span>
+        <a (tap)="toVadiolistPage()" class="more">
+          <em>更多&nbsp;&gt;&nbsp;</em>
+        </a>
+      </p>
+      <div class="hot_cont">
+        <a *ngFor="let vi of hotVideo" class="video_list" (tap)="toVadioinfoPage(vi)">
+          <div class="img_box">
+            <img src="{{service.ctxPath  + vi.cover_url_small}}" alt="">
+          </div>
+          <span>{{vi.video_title}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="hot_audio">
+      <p>
+        <span style="font-size:1.4rem;">最新听书</span>
+        <a (tap)="toAudiolistPage()" class="more">
+          <em>更多&nbsp;&gt;&nbsp;</em>
+        </a>
+      </p>
+      <div class="hot_cont">
+        <a *ngFor="let au of hotAudio" class="audio_list" (tap)="toAudioinfoPage(au)">
+          <div class="img_box">
+            <img src="{{service.ctxPath + au.cover_url}}" alt="">
+          </div>
+          <span>{{au.audio_title}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</ion-content>

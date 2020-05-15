@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title start>用户登录</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo"></div>
+  <div class="row"><ion-input type="text" value="" [(ngModel)]="userName" placeholder="账号"></ion-input></div>
+  <div class="row"><ion-input type="password" [(ngModel)]="passWord" placeholder="密码"></ion-input></div>
+  <div class="row"><button ion-button full (tap)="tologin()">登录</button></div>
+  <p class="btxt">© 2018 书香荆楚 全面阅读</p>
+</ion-content>

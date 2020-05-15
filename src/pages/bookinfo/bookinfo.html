@@ -1,0 +1,63 @@
+<ion-content>
+    <div class="info-parent" *ngIf="bookInfo">
+      <div class="book-cover">
+        <img src="{{service.ctxPath + bookInfo.book_cover_small}}" />
+      </div>
+      <div class="book-detail">
+        <p class="bk-name">{{bookInfo.book_name}}</p>
+        <p class="bk-class">{{bookInfo.book_cat_name}}</p>
+        <p class="bk-class">{{bookInfo.book_author}}</p>
+        <p class="bk-class">{{bookInfo.book_publisher}}</p>
+      </div>
+      <div class="bk-html">{{bookInfo.book_remark}}</div>
+    </div>
+    <div class="book-action">
+      <a (click)="addshlf()" *ngIf="!bookInfo || !bookInfo.shelf_id">加入收藏</a>
+      <a  *ngIf="bookInfo && bookInfo.shelf_id" style="color:#999">已收藏</a>
+      <a (click)="toread()" style="font-weight: bold;">立即阅读</a>
+    </div>
+    <div class="newpl">
+      <div class="newpl-title">相关推荐</div>
+      <div class="hot_cont">
+        <a *ngFor="let bk of hotBook" class="book_list" (tap)="reload(bk.book_id)">
+          <div class="img_box">
+            <img src="{{service.ctxPath + bk.book_cover_small}}" alt="">
+          </div>
+          <span>{{bk.book_name}}</span>
+        </a>
+      </div>
+    </div>
+    <div class="newpl" style="padding-left: 0;">
+      <div class="newpl-title" style="padding-left: 16px;">最新评论</div>
+      <div class="hot_cont">
+        <div class="pllist">
+          <div class="plitem" *ngFor="let pl of plList">
+            <div class="m-cover">
+              <img *ngIf="pl.icon" src="{{service.ctxPath + pl.icon}}">
+              <img *ngIf="!pl.icon" src="{{service.ctxPath + '/static/mobile/img/touxiang.png'}}">
+            </div>
+            <div class="m-detail">
+              <div class="m-row">
+                <label class="u-name">{{pl.nick_name}}</label>
+                <span>{{pl.create_time.substr(5,11)}}</span>
+              </div>
+              <div class="m-col">
+                {{pl.review_content}}
+              </div>
+            </div>
+          </div>
+          <p *ngIf="!plList.length || plList.length == 0" class="plink">还没有任何评论</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <button class="rback" (tap)="navPop()"></button>
+      <form class="footer-form">
+        <ion-input placeholder="Text Input" name="review_content" [(ngModel)]="review_content" placeholder="输入你想说的..."></ion-input>
+      </form>
+      <button class="submit" ion-button (click)="sendPl()">评论</button>
+    </ion-toolbar>
+  </ion-footer>
+  

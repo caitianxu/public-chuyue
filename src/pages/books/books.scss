@@ -1,0 +1,42 @@
+page-books {
+  .data-list {
+    float: left;
+    width: 33.33%;
+    padding-right: 10px;
+    margin-bottom: 10px;
+  }
+  .data-list .bk-cover {
+    float: left;
+    width: 100%;
+    height: 38vw;
+  }
+  .data-list .bk-cover img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .data-list .bk-detail {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .data-list p {
+    margin: 0 0 10px 0;
+    line-height: 1.5rem;
+    max-height: 6rem;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+  }
+  .data-list p {
+    color: #5d5c5c;
+  }
+  .data-list h3 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    height: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+}

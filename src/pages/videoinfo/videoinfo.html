@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title start>{{title}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+    <div class="info-parent" *ngIf="video">
+      <div class="book-cover">
+        <img src="{{service.ctxPath + video.cover_url_small}}" />
+      </div>
+      <div class="bk-html">{{video.video_remark}}</div>
+    </div>
+    <div class="book-action">
+      <a (click)="sc()" *ngIf="!issc">加入收藏</a>
+      <a *ngIf="issc" style="color:#999">已收藏</a>
+      <a (click)="toread()" style="font-weight: bold;">观看视频</a>
+    </div>
+    <div class="newpl">
+      <div class="newpl-title">相关推荐</div>
+      <div class="hot_cont">
+        <a *ngFor="let vi of hotVideo" class="book_list" (tap)="reload(vi)">
+          <div class="img_box">
+            <img src="{{service.ctxPath + vi.cover_url_small}}" alt="">
+          </div>
+          <span>{{vi.video_title}}</span>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+  

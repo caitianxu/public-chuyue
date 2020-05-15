@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title start>{{title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <div class="info-parent" *ngIf="audio">
+    <div class="book-cover">
+      <img src="{{service.ctxPath + audio.cover_url_small}}" />
+    </div>
+    <div class="bk-html">{{audio.audio_remark}}</div>
+  </div>
+  <div class="book-action">
+    <a (click)="addshlf()" *ngIf="!issc">加入收藏</a>
+    <a *ngIf="issc" style="color:#999">已收藏</a>
+    <a (click)="toread()" style="font-weight: bold;">开始听书</a>
+  </div>
+  <div class="newpl">
+    <div class="newpl-title">相关推荐</div>
+    <div class="hot_cont">
+      <a *ngFor="let au of hotAudio" class="book_list" (tap)="reload(au)">
+        <div class="img_box">
+          <img src="{{service.ctxPath + au.cover_url_small}}" alt="">
+        </div>
+        <span>{{au.audio_title}}</span>
+      </a>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="delAll()">
+        清除
+      </button>
+    </ion-buttons>
+    <ion-title start>音频收藏</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="public-page-content">
+    <div class="book-records public-page-content">
+      <div class="record-items min-loading-height public-page-content">
+        <div class="record-item" *ngFor="let item of readRecord">
+          <div class="cover" (tap)="toAudioinfoPage(item)">
+            <img src="{{service.ctxPath + item.cover_url_small}}" *ngIf="item.cover_url_small">
+          </div>
+          <div class="detail">
+            <h1>{{item.audio_title}}</h1>
+          </div>
+        </div>
+        <div class="un-records" id="unRecords" style="display: none"></div>
+      </div>
+    </div>
+  </div>
+  <p class="row_mess" *ngIf="param.more">已经没有更多数据</p>
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载中...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

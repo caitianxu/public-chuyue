@@ -1,0 +1,246 @@
+page-me {
+  .header-m {
+    width: 100%;
+    background: #488aff;
+    position: initial;
+    height: auto;
+  }
+
+  .header-m .setting {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  .header-m .msg {
+    width: 100%;
+    padding: 30px 5% 10px 5%;
+    color: #fff;
+    display: inline-block;
+  }
+  .header-m .msg .ll{
+    float: left;
+    width: 100%;
+  }
+  .nameId{
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+  .header-m .msg .tx {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: block;
+    margin:  0 auto;
+    background: url('../assets/imgs/user.png') no-repeat center center;
+    background-size: cover;
+  }
+
+  .header-m .msg .tx img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-m .msg .nameId .icon-nv {
+    background: #ff9eac;
+    font-size: 14px;
+    padding: 0 4px;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .header-m .msg .nameId .icon-male {
+    background: #62d7fd;
+    font-size: 14px;
+    padding: 0 4px;
+    border-radius: 3px;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .header-m .msg .nameId .sex .iconfont {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .header-m .msg .tx img {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .nameId p {
+    margin: 5px 0;
+  }
+
+  .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+    background: #ffffff;
+  }
+
+  .card .col {
+    width: 25%;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+    display: grid;
+  }
+
+  .card .col p {
+    color: #595959;
+  }
+
+  .card .col.wire:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #ddd;
+  }
+
+  .content {
+    background: #f4f5f6 !important;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .p-footer {
+    background: #fff;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .member_name{
+    font-size: 22px;
+    margin: 10px 0;
+  }
+
+  .card-actions{
+    float: left;
+    width: 100%;
+    padding: 20px 10px 30px 10px;
+    border-bottom: 1px #cbcccd solid;
+    a{
+      float: left;
+      width: 25%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      .cover{
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin: 0 auto;
+      }
+      .icon1{
+        background: url('../assets/imgs/micon1.png') no-repeat center center;
+        background-size: 60% auto;
+      }
+      .icon2{
+        background: url('../assets/imgs/micon2.png') no-repeat center center;
+        background-size: 60% auto;
+      }
+      .icon3{
+        background: url('../assets/imgs/micon3.png') no-repeat center center;
+        background-size: 60% auto;
+      }
+      .icon4{
+        background: url('../assets/imgs/micon4.png') no-repeat center center;
+        background-size: 60% auto;
+      }
+    }
+  }
+  .c-row{
+    float: left;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    button{
+      min-width: 100px;
+    }
+    .c50{
+      float: left;
+      width: 50%;
+      text-align: center;
+    }
+  }
+  .map-all{
+    float: left;
+    width: 100%;
+    height: 50vw;
+    background: url('../assets/imgs/center-lin.png') no-repeat center center;
+    background-size: 80% auto;
+    position: relative;
+    p{
+      color: #488aff;
+    }
+    .txt1{
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      height: 44px;
+      top: 0;
+      left: 50%;
+      margin-left: -50px;
+      span{
+        font-size: 16px;
+      }
+    }
+    .txt2{
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      height: 44px;
+      top: 50%;
+      margin-top: -22px;
+      left: 0;
+      span{
+        font-size: 16px;
+      }
+    }
+    .txt3{
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      height: 44px;
+      top: 50%;
+      margin-top: -22px;
+      right: 0;
+      span{
+        font-size: 16px;
+      }
+    }
+    .txt4{
+      position: absolute;
+      width: 100px;
+      text-align: center;
+      height: 44px;
+      bottom: 0;
+      left: 50%;
+      margin-left: -50px;
+      span{
+        font-size: 16px;
+      }
+    }
+  }
+}

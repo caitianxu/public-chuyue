@@ -1,0 +1,117 @@
+page-home {
+  #content>div>p {
+    padding: 0.5rem;
+  }
+
+  #content>div>.hot_cont {
+    padding: 0 1rem;
+  }
+
+  p .more {
+    float: right;
+    margin-top: 0.1rem;
+    color: #999;
+    text-decoration: none;
+  }
+
+  #content>div>.hot_cont:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  /*图书*/
+  .hot_book>.hot_cont>.book_list {
+    float: left;
+    width: calc(33.33% - 0.67rem);
+    width: -moz-calc(33.33% - 0.67rem);
+    width: -webkit-calc(33.33% - 0.67rem);
+  }
+
+  .hot_book>.hot_cont>.book_list:nth-child(3n+2) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  /*视频*/
+  .hot_video>.hot_cont>.video_list {
+    float: left;
+    width: calc(50% - 0.5rem);
+    width: -moz-calc(50% - 0.5rem);
+    width: -webkit-calc(50% - 0.5rem);
+  }
+
+  .hot_video>.hot_cont>.video_list:nth-child(2n+1) {
+    margin-right: 0.5rem;
+  }
+
+  .hot_video>.hot_cont>.video_list:nth-child(2n) {
+    margin-left: 0.5rem;
+  }
+
+  /*音频*/
+  .hot_audio>.hot_cont>.audio_list {
+    float: left;
+    width: calc(33.33% - 0.67rem);
+    width: -moz-calc(33.33% - 0.67rem);
+    width: -webkit-calc(33.33% - 0.67rem);
+  }
+
+  .hot_audio>.hot_cont>.audio_list:nth-child(3n+2) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .img_box {
+    width: 100%;
+    box-shadow: 1px 1px 6px #aaa;
+    height: 35vw;
+    background: #f5f8fa;
+  }
+
+  .hot_video .img_box {
+    height: 25vw;
+  }
+
+  .img_box img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hot_cont span {
+    padding: 4px 2px;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 300;
+    text-align: center;
+    color: #696969;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .hot_book,
+  .hot_video,
+  .hot_audio {
+    float: left;
+    width: 100%;
+  }
+
+  a em {
+    font-style: normal;
+    font-size: 1rem;
+  }
+  .cont_cont{
+    display: inline-block;
+    width: 100%;
+    padding: 0 16px;
+  }
+  .undata{
+    min-height: 100px;
+    line-height: 100px;
+    color: #999;
+    text-align: center;
+  }
+}

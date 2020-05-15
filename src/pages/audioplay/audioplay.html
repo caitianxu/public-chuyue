@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons end>
+        <button ion-button icon-only (tap)="toMePage()">
+          <ion-icon class="iconfont icon-user"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title start>返回</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content scroll="false">
+    <div class="audio-top">
+      <div class="cover">
+        <img *ngIf="audio" src="{{service.ctxPath + audio.cover_url}}">
+      </div>
+      <h1 *ngIf="audio">{{audio.audio_title}}</h1>
+    </div>
+    <div class="audio-line">
+      <audio controls="controls" id="myAudio" (ended)="_ended()" (pause)="_pause()" (play)="_play()" style="width: 100%;"
+        autoplay>
+        <!-- <source src="{{audio.audio_url}}" type="audio/mpeg" /> -->
+      </audio>
+    </div>
+    <div class="audio-action">
+      <div class="audio-center">
+        <span class="ico-rload" [ngClass]="{'ico-rload-active': loop}" (tap)="setloop()"></span>
+        <span class="ico-last" (click)="audioLast()"></span>
+        <span class="ico-play" [ngClass]="{'ico-play-stop': !stop}" (tap)="audioPause()"></span>
+        <span class="ico-next" (click)="audioNext()"></span>
+        <span class="ico-sc" [ngClass]="{'ico-sc-active': issc}" (tap)="audiosc()"></span>
+      </div>
+    </div>
+  </ion-content>
+  

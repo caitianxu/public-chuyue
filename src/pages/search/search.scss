@@ -1,0 +1,44 @@
+page-search {
+  .data-list {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px #eee solid;
+  }
+  .data-list .bk-cover {
+    float: left;
+    width: 30%;
+    height: 38vw;
+  }
+  .data-list .bk-cover img {
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+  .data-list .bk-detail {
+    float: left;
+    width: 70%;
+    box-sizing: border-box;
+    padding-left: 10px;
+  }
+  .data-list p {
+    margin: 0 0 10px 0;
+    line-height: 1.5rem;
+    max-height: 6rem;
+    overflow: hidden;
+    float: left;
+    width: 100%;
+  }
+  .data-list p{
+    color: #5d5c5c;
+  }
+  .data-list h3{
+    font-size: 1.7rem;
+    line-height: 3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+}

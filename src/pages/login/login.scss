@@ -1,0 +1,69 @@
+page-login {
+  ion-content {
+    background: #367cb7 !important;
+  }
+  .scroll-content {
+    // overflow-y: hidden;
+  }
+  ion-navbar {
+    .toolbar-background-ios,
+    .toolbar-background-md {
+      background: #367cb7 !important;
+    }
+  }
+
+  ion-list {
+    ion-item {
+      background: #367cb7 !important;
+    }
+  }
+
+  .logo {
+    float: left;
+    width: 100%;
+    height: 40vh;
+    background: url('../assets/imgs/logo-login.png') no-repeat center center;
+    background-size: 25% auto;
+  }
+
+  .row {
+    float: left;
+    width: 100%;
+    padding: 0 15vw;
+    margin-bottom: 20px;
+
+    input {
+      background: #fff;
+      width: 100%;
+      margin: 0;
+      height: 45px;
+      padding: 10px 20px;
+      line-height: 25px;
+      border-radius: 22px;
+    }
+
+    button {
+      background: #77b3d7;
+      border-radius: 22px;
+      height: 45px;
+      padding: 10px;
+      line-height: 25px;
+      text-align: center;
+    }
+  }
+
+  .page-top {
+    float: left;
+    width: 100%;
+    height: calc(90vh - 50px);
+  }
+
+  .btxt {
+    float: left;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10vh;
+  }
+}
